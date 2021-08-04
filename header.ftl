@@ -1,20 +1,22 @@
 <#--
 	@package Akina
 -->
-<#global res_base_url = settings.cdn?then("//cdn.jsdelivr.net/gh/LIlGG/halo-theme-sakura@1.3.1", theme_base)/>
+<#global res_base_url = settings.cdn?then("//oss.ikarts.cn/halo/themes/sakura", theme_base)/>
 <#macro header title>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<title itemprop="name">${title!}</title>
 	<meta name="description" content="${meta_description!}"/>
 	<meta name="keywords" content="${meta_keywords!}"/>
   	<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
 
 	<@global.head />
-	<link rel='stylesheet' href='${theme_base!}/styles/style.min.css?ver=1.3.1' type='text/css' media='all'>
+	<!-- ${theme_base!} 动态获取css-->
+	<link rel='stylesheet' href='https://oss.ikarts.cn/halo/themes/sakura/styles/style.min.css?ver=1.3.1' type='text/css' media='all'>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="noexist" onload="this.media='all'">
 	<link rel="stylesheet" href="//at.alicdn.com/t/font_2010950_uq2c7ykeiyk.css" media="noexist" onload="this.media='all'">
 	<link rel="stylesheet" href="${res_base_url!}/source/css/lib.css" media="noexist" onload="this.media='all'">

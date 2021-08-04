@@ -9,7 +9,7 @@
  * @package Akina
  */
 -->
-<#global res_base_url = settings.cdn?then("//cdn.jsdelivr.net/gh/LIlGG/halo-theme-sakura@1.3.1", theme_base)/>
+<#global res_base_url = settings.cdn?then("//oss.ikarts.cn/halo/themes/sakura", theme_base)/>
 <#macro footer>
 </div><!-- #content -->
 <#include "comments.ftl">
@@ -67,7 +67,9 @@
 					<img src="${res_base_url!}/source/images/other/gongan.png">${settings.footer_ga_case_number}
 				</a>	
 				</#if>
+              	<!-- 统计代码 !-->
 			</p>
+          
 		</div>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
@@ -294,7 +296,8 @@
 <script type='text/javascript' src='${res_base_url!}/source/js/qrcode.min.js' defer></script>
 <script type='text/javascript' src='${res_base_url!}/source/lib/flv.min/index.js' defer></script>
 <script type='text/javascript' src='${res_base_url!}/script/i18n.min.js?ver=1.3.1' defer></script>
-<script type='text/javascript' src='${theme_base!}/script/app.min.js?ver=1.3.1'></script>
+	<#--${theme_base!}-->
+<script type='text/javascript' src='https://oss.ikarts.cn/halo/themes/sakura/script/app.min.js?ver=1.3.1'></script>
 <#nested />
 <#if settings.live2d_switch!true>
 <script src="${res_base_url!}/source/lib/jquery-ui/jquery-ui.min.js" async defer></script>
